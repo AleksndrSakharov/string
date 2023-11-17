@@ -33,6 +33,18 @@ char* str_int(int num, char* str, int k){
     return str;
 
 }
+void DelSymbor(char* str, char sym){
+    char* p1 = str, *p2 = str;
+    while(*p1){
+        if(*p1 == sym){
+            p1++;
+        }
+        else{
+            *p2 ++ = *p1 ++;
+        }
+    }
+    *p2 = '\0';
+}
 
 void main(){
     char str[100];
@@ -43,11 +55,11 @@ void main(){
         k++;
     }
     char* str_dyn = malloc(k);
-
+    char s1[15] = " 5";
     char ex_str1[15] = "hello world!";
     char ex_str2[15] = "Sasha";
     char* newstr = strcat(ex_str1, ex_str2);
-    printf("%s \n", newstr);
+    printf("%s \n", s1);
     printf("%lu \n", strlen(ex_str1));
     printf("%d \n", int_str("500"));
     printf("%s \n", str_int(num, str_dyn, k));
