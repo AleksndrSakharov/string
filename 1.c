@@ -45,9 +45,10 @@ void DelSymbor(char* str, char sym){
     }
     *p2 = '\0';
 }
-
+// есть массив у которого есть пара элементов необходимо найти значение у которого нет пары(нельзя выделять доп память) вывести элемент
 void main(){
     char str[100];
+    char s2[100] = "eewr34ewsdhfuih4wuyhr7yf23hyhdsiyrnvw";
     int num = 781, k = 0;
     int n = num;
     while(n> 0){
@@ -59,7 +60,8 @@ void main(){
     char ex_str1[15] = "hello world!";
     char ex_str2[15] = "Sasha";
     char* newstr = strcat(ex_str1, ex_str2);
-    printf("%s \n", s1);
+    DelSymbor(s2, 'w');
+    printf("%s \n", s2);
     printf("%lu \n", strlen(ex_str1));
     printf("%d \n", int_str("500"));
     printf("%s \n", str_int(num, str_dyn, k));
